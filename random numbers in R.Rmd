@@ -1,0 +1,148 @@
+---
+output:
+  html_document: default
+  html_notebook: default
+  pdf_document: default
+  word_document: default
+---
+
+# ASSIGNMENT
+### By Jerry John 
+
+# Different ways to generate random numbers in R
+
+## Uniform numbers
+
+To generate random numbers from a uniform distribution you can use the runif() function. Alternatively, you can use sample() to take a random sample using with or without replacements.
+
+
+```{r}
+n =10
+# generate n random numbers between the default values of 0 and 1
+runif(n)            
+
+```
+
+```{r}
+
+# generate n random numbers between 0 and 25
+runif(n, min = 0, max = 25)       
+
+ 
+```
+
+```{r}
+# generate n random numbers between 0 and 25 (with replacement)
+sample(0:25, n, replace = TRUE)
+```
+
+
+```{r}
+# generate n random numbers between 0 and 25 (without replacement)
+sample(0:25, n, replace = FALSE) 
+```
+
+## Normal Distribution Numbers
+
+The normal (or Gaussian) distribution is the most common and well know distribution.
+
+```{r}
+# generate n random numbers from a normal distribution with given mean & st. dev.
+rnorm(n, mean = 0, sd = 1) 
+```
+
+## Binomial Distribution Numbers
+
+
+This is conventionally interpreted as the number of successes in size = x trials and with prob = p probability of success:
+
+```{r}
+# generate a vector of length n displaying the number of successes from a trial 
+# size = 100 with a probabilty of success = 0.5
+rbinom(n, size = 100, prob = 0.5) 
+```
+
+## Poisson Distribution Numbers
+
+The Poisson distribution is a discrete probability distribution that expresses the probability of a given number of events occuring in a fixed interval of time and/or space if these events occur with a known average rate and independently of the time since the last event.
+
+
+```{r}
+# generate a vector of length n displaying the random number of events occuring 
+# when lambda (mean rate) equals 4.
+rpois(n, lambda = 4) 
+```
+
+## Exponential Distribution Numbers
+
+The Exponential probability distribution describes the time between events in a Poisson process.
+
+```{r}
+# generate a vector of length n with rate = 1
+rexp(n, rate = 1)  
+```
+
+## Gamma Distribution Numbers
+
+The Gamma probability distribution is related to the Beta distribution and arises naturally in processes for which the waiting times between Poisson distributed events are relevant.
+
+```{r}
+# generate a vector of length n with shape parameter = 1
+rgamma(n, shape = 1)
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
